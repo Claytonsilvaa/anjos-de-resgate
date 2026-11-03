@@ -1,0 +1,53 @@
+[
+  {
+    "id": "max",
+    "codigo": "104",
+    "nome": "MAX",
+    "especie": "Cão",
+    "especieDetalhe": "Cão (SRD)",
+    "sexo": "Macho",
+    "iconeSexo": "fi-rr-mars",
+    "iconeEspecie": "fi-rr-dog",
+    "porte": "Médio",
+    "iconePorte": "fi-rr-expand-arrows",
+    "idadeCategoria": "Adulto",
+    "idadeMeses": 36,
+    "idadeTexto": "3 anos",
+    "foto": "img/Max.jpg",
+    "historico": "Resgatado em situação de risco. Avaliação comportamental revela um cão de energia estável e alta sociabilidade. Ideal para infraestrutura habitacional fechada e convivência familiar."
+  },
+  {
+    "id": "luna",
+    "codigo": "209",
+    "nome": "LUNA",
+    "especie": "Gato",
+    "especieDetalhe": "Gato (SRD)",
+    "sexo": "Fêmea",
+    "iconeSexo": "fi-rr-venus",
+    "iconeEspecie": "fi-rr-cat",
+    "porte": "Pequeno",
+    "iconePorte": "fi-rr-compress-arrows",
+    "idadeCategoria": "Filhote",
+    "idadeMeses": 8,
+    "idadeTexto": "8 meses",
+    "foto": "img/Luna.jpg",
+    "historico": "Resgatada ainda ninhada e socializada em lar temporário clínico. Apresenta adaptação imediata a ambientes internos telados, uso rigoroso de caixa sanitária e temperamento dócil."
+  },
+  {
+    "id": "duque",
+    "codigo": "312",
+    "nome": "DUQUE",
+    "especie": "Cão",
+    "especieDetalhe": "Cão (SRD)",
+    "sexo": "Macho",
+    "iconeSexo": "fi-rr-mars",
+    "iconeEspecie": "fi-rr-dog",
+    "porte": "Grande",
+    "iconePorte": "fi-rr-expand-arrows",
+    "idadeCategoria": "Idoso",
+    "idadeMeses": 84,
+    "idadeTexto": "7 anos",
+    "foto": "img/Duque.jpg",
+    "historico": "Cão sênior de porte imponente e comportamento extremamente calmo. Já passou por reabilitação completa, caminha sem tracionar a guia e busca uma família tranquila."
+  }
+]
