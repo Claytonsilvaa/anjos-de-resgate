@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjos de Resgate Catálogo de Adoção</title>
+    <title>Anjos de Resgate | Catálogo de Adoção</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+   
 </head>
 <body>
 
@@ -19,16 +18,17 @@
             </a>
         </nav>
 
-        <form action="">
-            <input type="search" placeholder="Procure pelo nome">
+        <form action="" method="get">
+            <input type="search" name="busca" placeholder="Procure pelo nome" aria-label="Buscar animal pelo nome">
             <button type="submit" aria-label="Buscar">
                 <i class="fi fi-rr-search" aria-hidden="true"></i>
             </button>
         </form>
         <p>Catálogo de Adoção</p>
+
     </header>
 
-    <main class="titulo-catalogo">
+    <main id="catalogo" class="titulo-catalogo">
 
         <section>
             <h1>Encontre seu Anjo <sup>3</sup></h1>
@@ -48,7 +48,7 @@
                     <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Médio</li>
                     <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Adulto</li>
                 </ul>
-                <a href="#detalhes-max">Ver perfil</a>
+                <a href="#detalhes-max">VER FICHA</a>
         </article>
         <article>
                 <img src="img/Luna.jpg" alt="Foto da gata Luna">
@@ -59,20 +59,234 @@
                     <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Pequeno</li>
                     <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Filhote</li>
                 </ul>
-                <a href="#detalhes-luna">Ver perfil</a>
+                <a href="#detalhes-luna">VER FICHA</a>
         </article>
         <article>
-                <img src="img/Duque.jpg" alt="Foto do cão Max">
+                <img src="img/Duque.jpg" alt="Foto do cão Duque">
                 <h2>DUQUE</h2>
                 <ul>
                     <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
                     <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
-                    <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Médio</li>
+                    <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Grande</li>
                     <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Idoso</li>
                 </ul>
-                <a href="#detalhes-max">Ver perfil</a>
+                <a href="#detalhes-duque">VER FICHA</a>
         </article>
 
+                        <!-- ===== DETALHES DO MAX ===== -->
+
+            <section id="detalhes-max" aria-labelledby="nome-max">
+
+                <header class="cabecalho-detalhes">
+                    <nav aria-label="Navegação dos detalhes">
+
+                        <a href="#catalogo" class="logo-detalhes" title="Voltar ao início">
+                            <img src="logo.jpeg" alt="Logo Anjos de Resgate Associação">
+                        </a>
+
+                        <a href="#catalogo" class="btn-voltar">
+                            <i class="fi fi-rr-arrow-left" aria-hidden="true"></i>
+                            Voltar ao Catálogo
+                        </a>
+
+                    </nav>
+                </header>
+
+                <article>
+
+                    <figure>
+                        <img src="img/Max.jpg" alt="Foto do cachorro Max disponível para adoção">
+                    </figure>
+
+                    <section>
+                        <h1 id="nome-max">Max</h1>
+                        <p>Código PETEC #104</p>
+                    </section>
+
+                    <ul aria-label="Características do animal">
+                        <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
+                        <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Médio</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> 3 anos</li>
+                    </ul>
+
+                    <section aria-labelledby="saude-max">
+                        <h2 id="saude-max">
+                            <i class="fi fi-rr-file-medical-alt" aria-hidden="true"></i>
+                            Triagem Clínica
+                        </h2>
+
+                        <ul>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vacinado</li>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vermifugado</li>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Castrado</li>
+                        </ul>
+                    </section>
+
+                    <section aria-labelledby="historico-max">
+                        <h2 id="historico-max">O Histórico</h2>
+                        <p>Texto com a história do animal.</p>
+                    </section>
+
+                    <footer>
+                        <button type="button">
+                            <i class="fi fi-rr-edit" aria-hidden="true"></i>
+                            Quero Adotar o Max
+                        </button>
+
+                        <p>A seleção inicia o preenchimento do inquérito de responsabilidade civil.</p>
+                    </footer>
+
+                </article>
+
+            </section>
+
+
+                                <!-- ==== DETALHES DA LUNA ==== -->
+
+            <section id="detalhes-luna" aria-labelledby="nome-luna">
+
+                <header class="cabecalho-detalhes">
+                    <nav aria-label="Navegação dos detalhes">
+
+                        <a href="#catalogo" class="logo-detalhes" title="Voltar ao início">
+                            <img src="logo.jpeg" alt="Logo Anjos de Resgate Associação">
+                        </a>
+
+                        <a href="#catalogo" class="btn-voltar">
+                            <i class="fi fi-rr-arrow-left" aria-hidden="true"></i>
+                            Voltar ao Catálogo
+                        </a>
+
+                    </nav>
+                </header>
+
+                <article>
+
+                    <figure>
+                        <img src="img/Luna.jpg" alt="Foto da gata Luna disponível para adoção">
+                    </figure>
+
+                    <section>
+                        <h1 id="nome-luna">Luna</h1>
+                        <p>Código PETEC #209</p>
+                    </section>
+
+                    <ul aria-label="Características do animal">
+                        <li><i class="fi fi-rr-cat" aria-hidden="true"></i> Gato</li>
+                        <li><i class="fi fi-rr-venus" aria-hidden="true"></i> Fêmea</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Pequeno</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> 8 meses</li>
+                    </ul>
+
+                    <section aria-labelledby="saude-luna">
+                        <h2 id="saude-luna">
+                            <i class="fi fi-rr-file-medical-alt" aria-hidden="true"></i>
+                            Triagem Clínica
+                        </h2>
+
+                        <ul>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vacinada</li>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vermifugada</li>
+                        </ul>
+                    </section>
+
+                    <section aria-labelledby="historico-luna">
+                        <h2 id="historico-luna">O Histórico</h2>
+
+                        <p>
+                            Resgatada ainda ninhada e socializada em lar temporário clínico.
+                            Apresenta adaptação imediata a ambientes internos telados,
+                            uso rigoroso de caixa sanitária e temperamento dócil.
+                        </p>
+                    </section>
+
+                    <footer>
+                        <button type="button">
+                            <i class="fi fi-rr-edit" aria-hidden="true"></i>
+                            Quero Adotar a Luna
+                        </button>
+
+                        <p>A seleção inicia o preenchimento do inquérito de responsabilidade civil.</p>
+                    </footer>
+
+                </article>
+
+            </section>
+
+
+                                <!-- ==== DETALHES DO DUQUE ==== -->
+
+            <section id="detalhes-duque" aria-labelledby="nome-duque">
+
+                <header class="cabecalho-detalhes">
+                    <nav aria-label="Navegação dos detalhes">
+
+                        <a href="#catalogo" class="logo-detalhes" title="Voltar ao início">
+                            <img src="logo.jpeg" alt="Logo Anjos de Resgate Associação">
+                        </a>
+
+                        <a href="#catalogo" class="btn-voltar">
+                            <i class="fi fi-rr-arrow-left" aria-hidden="true"></i>
+                            Voltar ao Catálogo
+                        </a>
+
+                    </nav>
+                </header>
+
+                <article>
+
+                    <figure>
+                        <img src="img/Duque.jpg" alt="Foto do cachorro Duque disponível para adoção">
+                    </figure>
+
+                    <section>
+                        <h1 id="nome-duque">Duque</h1>
+                        <p>Código PETEC #312</p>
+                    </section>
+
+                    <ul aria-label="Características do animal">
+                        <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
+                        <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Grande</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> 7 anos</li>
+                    </ul>
+
+                    <section aria-labelledby="saude-duque">
+                        <h2 id="saude-duque">
+                            <i class="fi fi-rr-file-medical-alt" aria-hidden="true"></i>
+                            Triagem Clínica
+                        </h2>
+
+                        <ul>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vacinado</li>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Vermifugado</li>
+                            <li><i class="fi fi-rr-check-circle" aria-hidden="true"></i> Castrado</li>
+                        </ul>
+                    </section>
+
+                    <section aria-labelledby="historico-duque">
+                        <h2 id="historico-duque">O Histórico</h2>
+
+                        <p>
+                            Cão sênior de porte imponente e comportamento extremamente calmo.
+                            Já passou por reabilitação completa, caminha sem tracionar a guia
+                            e busca uma família tranquila.
+                        </p>
+                    </section>
+
+                    <footer>
+                        <button type="button">
+                            <i class="fi fi-rr-edit" aria-hidden="true"></i>
+                            Quero Adotar o Duque
+                        </button>
+
+                        <p>A seleção inicia o preenchimento do inquérito de responsabilidade civil.</p>
+                    </footer>
+
+                </article>
+
+            </section>
         
     </main>
 </body>
