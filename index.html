@@ -28,9 +28,10 @@
 
     </header>
 
-    <main id="catalogo" class="titulo-catalogo">
+    <main id="catalogo" >
 
-        <section>
+        <!-- TÍTULO DO CATÁLOGO -->
+        <section class="titulo-catalogo">
             <h1>Encontre seu Anjo <sup>3</sup></h1>
             <p>Explore o catálogo da ONG e personalize sua busca por porte, espécie ou idade.</p>
             <button type="button">
@@ -39,39 +40,132 @@
             </button>
         </section>
 
-      <article>
-                <img src="img/Max.jpg" alt="Foto do cão Max">
-                <h2>MAX</h2>
-                <ul>
-                    <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
-                    <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
-                    <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Médio</li>
-                    <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Adulto</li>
-                </ul>
-                <a href="#detalhes-max">VER FICHA</a>
-        </article>
+<aside aria-labelledby="titulo-filtros">
+
+            <header>
+                <h2 id="titulo-filtros">Do seu<br>jeitinho</h2>
+
+                <div>
+                    <button type="reset" form="form-filtros">Limpar tudo</button>
+                    <button type="button" aria-label="Fechar menu">
+                        <i class="fi fi-rr-cross" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </header>
+
+  <form id="form-filtros">
+
+            <details open>
+                <summary>
+                    <span>Ordenar por</span>
+                    <i class="fi fi-rr-angle-small-up" aria-hidden="true"></i>
+                </summary>
+
+                <fieldset>
+                    <legend class="visually-hidden">Ordenar animais por</legend>
+                    <label><input type="radio" name="ordenacao" value="padrao" checked> Mais recentes</label>
+                    <label><input type="radio" name="ordenacao" value="idade-asc"> Idade menor-maior</label>
+                    <label><input type="radio" name="ordenacao" value="idade-desc"> Idade maior-menor</label>
+                    <label><input type="radio" name="ordenacao" value="nome-asc"> Nome (A-Z)</label>
+                </fieldset>
+            </details>
+
+            <details open>
+                <summary>
+                    <span>Porte</span>
+                    <i class="fi fi-rr-angle-small-up" aria-hidden="true"></i>
+                </summary>
+
+                <fieldset>
+                    <legend class="visually-hidden">Porte do animal</legend>
+                    <label><input type="radio" name="porte" value="Pequeno"> Pequeno</label>
+                    <label><input type="radio" name="porte" value="Médio"> Médio</label>
+                    <label><input type="radio" name="porte" value="Grande"> Grande</label>
+                </fieldset>
+            </details>
+
+            <details open>
+                    <summary>
+                        <span>Espécie</span>
+                        <i class="fi fi-rr-angle-small-up" aria-hidden="true"></i>
+                    </summary>
+
+                    <fieldset>
+                        <legend class="visually-hidden">Espécie do animal</legend>
+                        <label><input type="radio" name="especie" value="Ambas" checked> Ambas</label>
+                        <label><input type="radio" name="especie" value="Cão"> Cão</label>
+                        <label><input type="radio" name="especie" value="Gato"> Gato</label>
+                    </fieldset>
+            </details>
+
+            <details open>
+                    <summary>
+                        <span>Idade</span>
+                        <i class="fi fi-rr-angle-small-up" aria-hidden="true"></i>
+                    </summary>
+
+                    <fieldset>
+                        <legend class="visually-hidden">Idade do animal</legend>
+                        <label><input type="radio" name="idade" value="Filhote"> Filhote</label>
+                        <label><input type="radio" name="idade" value="Adulto"> Adulto</label>
+                        <label><input type="radio" name="idade" value="Idoso"> Idoso</label>
+                    </fieldset>
+            </details>
+
+            <footer>
+                <p>Personalize sua busca</p>
+                <button type="submit">
+                    Mostrar resultados
+                    <i class="fi fi-rr-arrow-right" aria-hidden="true"></i>
+                </button>
+            </footer>
+
+  </form>
+
+</aside>
+
+
+
+        <!-- CARDS DOS ANIMAIS -->
+
+
+    <section class="lista-animais" aria-label="Animais disponíveis para adoção">
+
         <article>
-                <img src="img/Luna.jpg" alt="Foto da gata Luna">
-                <h2>LUNA</h2>
-                <ul>
-                    <li><i class="fi fi-rr-cat" aria-hidden="true"></i> Gato</li>
-                    <li><i class="fi fi-rr-venus" aria-hidden="true"></i> Fêmea</li>
-                    <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Pequeno</li>
-                    <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Filhote</li>
-                </ul>
-                <a href="#detalhes-luna">VER FICHA</a>
-        </article>
-        <article>
-                <img src="img/Duque.jpg" alt="Foto do cão Duque">
-                <h2>DUQUE</h2>
-                <ul>
-                    <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
-                    <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
-                    <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Grande</li>
-                    <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Idoso</li>
-                </ul>
-                <a href="#detalhes-duque">VER FICHA</a>
-        </article>
+                    <img src="img/Max.jpg" alt="Foto do cão Max">
+                    <h2>MAX</h2>
+                    <ul>
+                        <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
+                        <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Médio</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Adulto</li>
+                    </ul>
+                    <a href="#detalhes-max">VER FICHA</a>
+            </article>
+            <article>
+                    <img src="img/Luna.jpg" alt="Foto da gata Luna">
+                    <h2>LUNA</h2>
+                    <ul>
+                        <li><i class="fi fi-rr-cat" aria-hidden="true"></i> Gato</li>
+                        <li><i class="fi fi-rr-venus" aria-hidden="true"></i> Fêmea</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Pequeno</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Filhote</li>
+                    </ul>
+                    <a href="#detalhes-luna">VER FICHA</a>
+            </article>
+            <article>
+                    <img src="img/Duque.jpg" alt="Foto do cão Duque">
+                    <h2>DUQUE</h2>
+                    <ul>
+                        <li><i class="fi fi-rr-dog" aria-hidden="true"></i> Cão</li>
+                        <li><i class="fi fi-rr-mars" aria-hidden="true"></i> Macho</li>
+                        <li><i class="fi fi-rr-ruler-horizontal" aria-hidden="true"></i> Grande</li>
+                        <li><i class="fi fi-rr-calendar" aria-hidden="true"></i> Idoso</li>
+                    </ul>
+                    <a href="#detalhes-duque">VER FICHA</a>
+            </article>
+
+    </section>
 
                         <!-- ===== DETALHES DO MAX ===== -->
 
@@ -129,7 +223,7 @@
                     </section>
 
                     <footer>
-                        <button type="button">
+                        <button type="button" class="btn-adotar" data-animal="Max">
                             <i class="fi fi-rr-edit" aria-hidden="true"></i>
                             Quero Adotar o Max
                         </button>
@@ -202,7 +296,7 @@
                     </section>
 
                     <footer>
-                        <button type="button">
+                        <button type="button" class="btn-adotar" data-animal="Luna">
                             <i class="fi fi-rr-edit" aria-hidden="true"></i>
                             Quero Adotar a Luna
                         </button>
@@ -276,7 +370,7 @@
                     </section>
 
                     <footer>
-                        <button type="button">
+                        <button type="button" class="btn-adotar" data-animal="Duque">
                             <i class="fi fi-rr-edit" aria-hidden="true"></i>
                             Quero Adotar o Duque
                         </button>
@@ -287,7 +381,58 @@
                 </article>
 
             </section>
+
+        <dialog id="modal-adocao" aria-labelledby="titulo-modal">
+
+                    <header>
+                        <h2 id="titulo-modal">Termo de Triagem</h2>
+                        <button type="button" aria-label="Fechar formulário">Fechar</button>
+                    </header>
+
+                    <!-- Passo 1: formulário -->
+                    <section>
+                            <p>
+                            Você está iniciando o protocolo de interesse para adotar <strong id="nome-animal-selecionado"></strong>.
+                            Preencha os dados para contato da equipe da ONG:
+                            </p>
+
+                            <form>
+                            <p>
+                                <label for="nome-adotante">Seu Nome Completo</label>
+                                <input id="nome-adotante" type="text" autocomplete="name" required placeholder="Digite seu nome completo">
+                            </p>
+
+                            <p>
+                                <label for="telefone-adotante">WhatsApp para Entrevista</label>
+                                <input id="telefone-adotante" type="tel" autocomplete="tel" required placeholder="(31) 99999-9999">
+                            </p>
+
+                            <p>
+                                <label for="tipo-imovel">Tipo de Imóvel</label>
+                                <select id="tipo-imovel" required>
+                                <option value="Casa com quintal fechado">Casa com quintal totalmente murado</option>
+                                <option value="Apartamento telado">Apartamento com redes de proteção</option>
+                                <option value="Sítio / Chácara">Propriedade rural cercada</option>
+                                </select>
+                            </p>
+
+                            <button type="submit">Enviar Inquérito de Adoção</button>
+                            </form>
+                    </section>
+
+                    <!-- Passo 2: sucesso -->
+                    <section>
+                        <h3>Protocolo Registrado com Sucesso</h3>
+                        <p>A equipe de triagem da ONG entrará em contato via WhatsApp para validar a entrevista de guarda responsável.</p>
+                        <button type="button">Concluir e Voltar ao Catálogo</button>
+                    </section>
+
+        </dialog>
         
     </main>
+
+    <footer>
+        <img src="petec.png" alt="Desenvolvido por PETEC">
+    </footer>
 </body>
 </html>
