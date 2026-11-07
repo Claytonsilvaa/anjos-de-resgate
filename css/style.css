@@ -442,3 +442,827 @@ main > aside > form > footer button {
     font-size: 14px;
     font-weight: 700;
 }
+
+/* =========================================================
+   7. LISTA DE ANIMAIS
+   Referência: .lista-animais
+========================================================= */
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+    width: 100%;
+}
+
+/* Card individual */
+
+.lista-animais article {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    overflow: hidden;
+
+    background-color: var(--branco-puro);
+    color: var(--preto-solido);
+
+    border: 2px solid var(--branco-puro);
+    border-radius: 12px;
+
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.6);
+
+    transition:
+        transform 0.28s var(--ease-out-expo),
+        box-shadow 0.28s var(--ease-out-expo),
+        border-color 0.2s ease;
+}
+
+.lista-animais article:hover {
+    transform: translate(-5px, -5px);
+
+    border-color: var(--amarelo-otimista);
+
+    box-shadow: 10px 10px 0 var(--amarelo-otimista);
+}
+
+/* Imagem do card */
+
+.lista-animais article > img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    display: block;
+
+    border-bottom: 2px solid var(--cinza-interface);
+
+    transition: transform 0.5s var(--ease-out-expo);
+}
+
+.lista-animais article:hover > img {
+    transform: scale(1.04);
+}
+
+/* Nome do animal */
+
+.lista-animais article > h2 {
+    margin: 20px 22px 14px;
+
+    color: var(--azul-institucional);
+
+    font-size: 30px;
+}
+
+/* Características */
+
+.lista-animais article > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0 22px 22px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lista-animais article > ul li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    background-color: var(--cinza-interface);
+    color: var(--preto-solido);
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Botão Ver ficha */
+
+.lista-animais article > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto 22px 22px;
+    padding: 15px;
+
+    background-color: var(--vermelho-alerta);
+    color: var(--branco-puro);
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.lista-animais article > a:hover {
+    background-color: #B91C1C;
+}
+
+.lista-animais article > a:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================================================
+   8. FICHAS INDIVIDUAIS
+   Referência:
+   #detalhes-max
+   #detalhes-luna
+   #detalhes-duque
+========================================================= */
+
+/* Esconde as fichas enquanto o catálogo está aberto */
+
+main > section[id^="detalhes-"] {
+    display: none;
+}
+
+/* Mostra somente a ficha selecionada */
+
+main > section[id^="detalhes-"]:target {
+    display: block;
+    animation: viewEnter 0.45s var(--ease-out-expo);
+}
+
+/* Esconde o catálogo quando uma ficha está selecionada */
+
+main:has(section[id^="detalhes-"]:target) > .titulo-catalogo,
+main:has(section[id^="detalhes-"]:target) > aside,
+main:has(section[id^="detalhes-"]:target) > .lista-animais {
+    display: none;
+}
+
+/* Cabeçalho das fichas */
+
+.cabecalho-detalhes {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 110px;
+
+    padding: 12px 28px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--branco-puro);
+    border-bottom: 4px solid var(--amarelo-otimista);
+
+    z-index: 100;
+}
+
+.cabecalho-detalhes nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-detalhes img {
+    height: 84px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Botão voltar */
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    border: 2px solid var(--azul-institucional);
+    border-radius: 50px;
+
+    color: var(--azul-institucional);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.btn-voltar:hover {
+    background-color: var(--amarelo-otimista);
+    border-color: var(--amarelo-otimista);
+}
+
+/* Espaço para o cabeçalho fixo */
+
+main > section[id^="detalhes-"] {
+    padding-top: 90px;
+}
+
+/* Cartão branco da ficha */
+
+main > section[id^="detalhes-"] > article {
+    display: grid;
+
+    grid-template-columns: 1fr 1.4fr;
+    grid-template-rows: auto auto auto auto auto;
+
+    column-gap: 55px;
+    align-items: start;
+
+    margin: 0 auto;
+    padding: 45px 48px;
+
+    background-color: var(--branco-puro);
+    color: var(--preto-solido);
+
+    border: 2px solid var(--branco-puro);
+    border-radius: 16px;
+
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.55);
+
+    animation: fichaSlideFromBottom 0.85s var(--ease-out-expo);
+}
+
+/* Fotografia do animal */
+
+main > section[id^="detalhes-"] article > figure {
+    grid-column: 1;
+    grid-row: 1 / 6;
+
+    width: 100%;
+    margin: 0;
+
+    align-self: center;
+}
+
+main > section[id^="detalhes-"] article > figure img {
+    display: block;
+
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    border: 2px solid var(--cinza-borda);
+    border-radius: 6px;
+}
+
+/* Nome e código */
+
+main > section[id^="detalhes-"] article > section:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+main > section[id^="detalhes-"] article > section:first-of-type h1 {
+    margin: 0 0 10px;
+
+    color: var(--azul-institucional);
+    font-size: 65px;
+}
+
+main > section[id^="detalhes-"] article > section:first-of-type p {
+    margin: 0;
+
+    color: #6B7280;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Características da ficha */
+
+main > section[id^="detalhes-"] article > ul {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0 0 22px;
+    padding: 0;
+
+    list-style: none;
+}
+
+main > section[id^="detalhes-"] article > ul li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    background-color: var(--cinza-interface);
+    color: var(--preto-solido);
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Triagem clínica */
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="saude-"] {
+    grid-column: 2;
+    grid-row: 3;
+
+    margin-bottom: 22px;
+    padding: 18px 20px;
+
+    background-color: var(--verde-saude-bg);
+
+    border: 1px solid var(--verde-saude-border);
+    border-left: 6px solid var(--verde-saude-icon);
+
+    border-radius: 8px;
+}
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="saude-"] h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--verde-saude-text);
+    font-size: 18px;
+}
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="saude-"] ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="saude-"] li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--verde-saude-text);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Histórico */
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="historico-"] {
+    grid-column: 2;
+    grid-row: 4;
+
+    margin-bottom: 25px;
+}
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="historico-"] h2 {
+    margin-bottom: 8px;
+
+    color: var(--preto-solido);
+    font-size: 21px;
+}
+
+main > section[id^="detalhes-"] article > section[aria-labelledby^="historico-"] p {
+    margin: 0;
+
+    color: #6B7280;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Rodapé da ficha e botão de adoção */
+
+main > section[id^="detalhes-"] article > footer {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.btn-adotar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 17px;
+
+    background-color: var(--vermelho-alerta);
+    color: var(--branco-puro);
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-adotar:hover {
+    background-color: #B91C1C;
+}
+
+.btn-adotar:active {
+    transform: scale(0.99);
+}
+
+main > section[id^="detalhes-"] article > footer p {
+    margin: 14px 0 0;
+
+    color: #6B7280;
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   9. MODAL DE ADOÇÃO
+   Referência: dialog#modal-adocao
+========================================================= */
+
+#modal-adocao {
+    width: min(560px, calc(100% - 30px));
+    max-height: 90vh;
+
+    padding: 32px;
+    overflow-y: auto;
+
+    background-color: var(--branco-puro);
+    color: var(--preto-solido);
+
+    border: 3px solid var(--preto-solido);
+    border-radius: 16px;
+
+    box-shadow: 10px 10px 0 var(--amarelo-otimista);
+}
+
+#modal-adocao::backdrop {
+    background-color: rgba(10, 37, 64, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+#modal-adocao[open] {
+    animation: scaleFadeIn 0.25s var(--ease-out-expo);
+}
+
+#modal-adocao > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+#modal-adocao > header h2 {
+    margin: 0;
+    color: var(--azul-institucional);
+    font-size: 25px;
+}
+
+#modal-adocao > header button {
+    padding: 8px 12px;
+
+    background-color: var(--cinza-interface);
+    color: var(--preto-solido);
+
+    border: none;
+    border-radius: 5px;
+}
+
+#modal-adocao section p {
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#modal-adocao section form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--preto-solido);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#modal-adocao section form input,
+#modal-adocao section form select {
+    width: 100%;
+    padding: 13px 15px;
+
+    background-color: var(--branco-puro);
+    color: var(--preto-solido);
+
+    border: 1px solid var(--cinza-borda);
+    border-radius: 5px;
+
+    outline: none;
+}
+
+#modal-adocao section form input:focus,
+#modal-adocao section form select:focus {
+    border-color: var(--azul-institucional);
+    box-shadow: 0 0 0 2px rgba(10, 37, 64, 0.1);
+}
+
+#modal-adocao section form button {
+    width: 100%;
+    padding: 15px;
+
+    background-color: var(--vermelho-alerta);
+    color: var(--branco-puro);
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#modal-adocao section form button:hover {
+    background-color: #B91C1C;
+}
+
+
+/* =========================================================
+   10. RODAPÉ PRINCIPAL
+   Referência: body > footer
+========================================================= */
+
+body > footer {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 20px 30px;
+
+    background-color: transparent;
+}
+
+body > footer img {
+    width: 180px;
+    height: auto;
+
+    opacity: 0.08;
+    filter: grayscale(100%);
+}
+
+
+/* =========================================================
+   11. ELEMENTOS DE ACESSIBILIDADE
+========================================================= */
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* =========================================================
+   12. ANIMAÇÕES
+========================================================= */
+
+@keyframes viewEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fichaSlideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(70px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes scaleFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   13. RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    main {
+        padding: 25px 22px 60px;
+    }
+
+    .lista-animais {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main > section[id^="detalhes-"] > article {
+        column-gap: 25px;
+        padding: 30px;
+    }
+
+    main > section[id^="detalhes-"] article > figure img {
+        height: 280px;
+    }
+
+    main > section[id^="detalhes-"] article > section:first-of-type h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Cabeçalho */
+
+    body > header {
+        min-height: auto;
+        padding: 15px;
+
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    body > header nav img {
+        height: 65px;
+    }
+
+    body > header form {
+        position: relative;
+        left: auto;
+        transform: none;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body > header > p {
+        font-size: 18px;
+    }
+
+    /* Catálogo */
+
+    main {
+        padding: 25px 16px 45px;
+    }
+
+    .titulo-catalogo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .titulo-catalogo h1 {
+        font-size: 38px;
+    }
+
+    .titulo-catalogo button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .lista-animais {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .lista-animais article > img {
+        height: 240px;
+    }
+
+    /* Cabeçalho das fichas */
+
+    .cabecalho-detalhes {
+        min-height: 90px;
+        padding: 12px 16px;
+    }
+
+    .logo-detalhes img {
+        height: 55px;
+    }
+
+    .btn-voltar {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    main > section[id^="detalhes-"] {
+        padding-top: 75px;
+    }
+
+    /* Ficha individual */
+
+    main > section[id^="detalhes-"] > article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    main > section[id^="detalhes-"] article > figure {
+        width: 100%;
+    }
+
+    main > section[id^="detalhes-"] article > figure img {
+        height: 260px;
+    }
+
+    main > section[id^="detalhes-"] article > section:first-of-type h1 {
+        font-size: 45px;
+    }
+
+    main > section[id^="detalhes-"] article > ul {
+        margin-bottom: 0;
+    }
+
+    main > section[id^="detalhes-"] article > section[aria-labelledby^="saude-"],
+    main > section[id^="detalhes-"] article > section[aria-labelledby^="historico-"] {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    main > section[id^="detalhes-"] article > footer {
+        width: 100%;
+    }
+
+    .btn-adotar {
+        font-size: 14px;
+    }
+
+    /* Filtros */
+
+    main > aside {
+        width: 100%;
+    }
+
+    /* Modal */
+
+    #modal-adocao {
+        padding: 22px;
+    }
+}
+
+
+/* Respeita usuários que preferem menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
