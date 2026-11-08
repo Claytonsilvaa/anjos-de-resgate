@@ -14,7 +14,13 @@
     "idadeMeses": 36,
     "idadeTexto": "3 anos",
     "foto": "img/Max.jpg",
-    "historico": "Resgatado em situação de risco. Avaliação comportamental revela um cão de energia estável e alta sociabilidade. Ideal para infraestrutura habitacional fechada e convivência familiar."
+    "historico": "Resgatado em situação de risco. Avaliação comportamental revela um cão de energia estável e alta sociabilidade. Ideal para infraestrutura habitacional fechada e convivência familiar.",
+    "saude": [
+      "Vacinado",
+      "Vermifugado",
+      "Castrado"
+    ],
+    "criadoEm": "2026-11-03T12:00:00.000Z"
   },
   {
     "id": "luna",
@@ -31,7 +37,12 @@
     "idadeMeses": 8,
     "idadeTexto": "8 meses",
     "foto": "img/Luna.jpg",
-    "historico": "Resgatada ainda ninhada e socializada em lar temporário clínico. Apresenta adaptação imediata a ambientes internos telados, uso rigoroso de caixa sanitária e temperamento dócil."
+    "historico": "Resgatada ainda ninhada e socializada em lar temporário clínico. Apresenta adaptação imediata a ambientes internos telados, uso rigoroso de caixa sanitária e temperamento dócil.",
+    "saude": [
+      "Vacinada",
+      "Vermifugada"
+    ],
+    "criadoEm": "2026-11-02T12:00:00.000Z"
   },
   {
     "id": "duque",
@@ -48,6 +59,12 @@
     "idadeMeses": 84,
     "idadeTexto": "7 anos",
     "foto": "img/Duque.jpg",
-    "historico": "Cão sênior de porte imponente e comportamento extremamente calmo. Já passou por reabilitação completa, caminha sem tracionar a guia e busca uma família tranquila."
+    "historico": "Cão sênior de porte imponente e comportamento extremamente calmo. Já passou por reabilitação completa, caminha sem tracionar a guia e busca uma família tranquila.",
+    "saude": [
+      "Vacinado",
+      "Vermifugado",
+      "Castrado"
+    ],
+    "criadoEm": "2026-11-01T12:00:00.000Z"
   }
 ]

@@ -1,0 +1,11 @@
+[
+  {
+    "animalId": "SUBSTITUA_PELO_ID_DO_MOCKAPI",
+    "animalNome": "MAX",
+    "nomeAdotante": "Pessoa Teste",
+    "telefone": "11900000000",
+    "tipoImovel": "Casa com quintal fechado",
+    "status": "pendente",
+    "criadoEm": "2026-11-08T12:00:00.000Z"
+  }
+]
